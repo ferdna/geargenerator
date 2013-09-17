@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>677</width>
+    <height>588</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gear Generator</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>Gear Properties</string>
+          </attribute>
+          <widget class="QGroupBox" name="gB_Gear1">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>30</y>
+             <width>241</width>
+             <height>161</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>Gear 1</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>211</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QRadioButton" name="radioButton">
+               <property name="text">
+                <string>Spur</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_2">
+               <property name="text">
+                <string>Ring</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_3">
+               <property name="text">
+                <string>Rack</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>60</y>
+              <width>85</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Teeth:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>90</y>
+              <width>116</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>Addendum:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="gB_Gear2">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>60</y>
+             <width>241</width>
+             <height>121</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>Gear 2</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>Spokes and More...</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string>Chain and Sprocket</string>
+          </attribute>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Display</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>677</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menu_Export">
+     <property name="title">
+      <string>&amp;Export</string>
+     </property>
+     <addaction name="actionImage"/>
+     <addaction name="actionDXF"/>
+    </widget>
+    <addaction name="action_Open"/>
+    <addaction name="separator"/>
+    <addaction name="action_Save"/>
+    <addaction name="actionSave_As"/>
+    <addaction name="separator"/>
+    <addaction name="menu_Export"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint_Preview"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionE_xit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="action_Help"/>
+    <addaction name="action_About"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionGrid_Lines"/>
+    <addaction name="separator"/>
+    <addaction name="action_Options"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Open">
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+  </action>
+  <action name="actionE_xit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="text">
+    <string>Save &amp;As</string>
+   </property>
+  </action>
+  <action name="actionImage">
+   <property name="text">
+    <string>Image</string>
+   </property>
+  </action>
+  <action name="actionDXF">
+   <property name="text">
+    <string>DXF</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionPrint_Preview">
+   <property name="text">
+    <string>Print Preview</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="action_Help">
+   <property name="text">
+    <string>&amp;Help</string>
+   </property>
+  </action>
+  <action name="actionGrid_Lines">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Grid Lines</string>
+   </property>
+  </action>
+  <action name="action_Options">
+   <property name="text">
+    <string>&amp;Options</string>
+   </property>
+  </action>
+  <action name="actionGrid_Diag">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Grid Diag</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
