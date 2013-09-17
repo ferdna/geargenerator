@@ -5,6 +5,7 @@
 gearObj::gearObj(QGraphicsItem *parent) : QGraphicsItem(parent)
 {
     setTransformOriginPoint(15,15);
+    setZValue(1);
 }
 
 QRectF gearObj::boundingRect() const
